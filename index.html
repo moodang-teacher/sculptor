@@ -10,7 +10,7 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Google Fonts: Bodoni Moda (Editorial Display) & Syne (Modern Avant-Garde) -->
+    <!-- Google Fonts: Bodoni Moda & Syne -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,9 +26,29 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
 
-    <link rel="stylesheet" href="/src/index.css" />
+    <!-- Swiper CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS (Play CDN - Zero Build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Bodoni Moda"', 'Georgia', 'serif'],
+              display: ['"Syne"', 'sans-serif'],
+              sans: ['"Pretendard"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- Custom Standalone CSS -->
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="bg-white text-neutral-900 selection:bg-pink-500 selection:text-white">
+  <body class="bg-white text-neutral-900 selection:bg-pink-500 selection:text-white font-sans">
     <!-- Custom Magnetic Cursor (Desktop) -->
     <div class="custom-cursor-dot hidden md:block" aria-hidden="true"></div>
     <div class="custom-cursor-ring hidden md:block" aria-hidden="true"></div>
@@ -40,15 +60,15 @@
       <span>신규 가입 시 10% 웰컴 쿠폰 & 전 상품 무료배송 혜택</span>
     </aside>
 
-    <!-- Top Navigation Bar (Strict 3-Zone Contract) -->
+    <!-- Top Navigation Bar -->
     <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-all">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
-        <!-- Zone 1: Single Brand Wordmark -->
+        <!-- Brand Wordmark -->
         <a href="#" class="font-editorial-serif text-2xl sm:text-3xl font-extrabold tracking-tighter text-neutral-950 hover:opacity-85 transition-opacity whitespace-nowrap shrink-0">
           SCULPTOR
         </a>
 
-        <!-- Zone 2: Navigation Links -->
+        <!-- Navigation Links -->
         <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium tracking-wide text-neutral-600 font-editorial-sans">
           <a href="#new-drop" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">NEW DROP</a>
           <a href="#full-release" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">FULL RELEASE</a>
@@ -57,20 +77,17 @@
           <a href="#inside-sculptor" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">INSIDE SCULPTOR</a>
         </nav>
 
-        <!-- Zone 3: Primary Action & Utilities -->
+        <!-- Utilities -->
         <div class="flex items-center gap-4 shrink-0">
-          <!-- Search Button -->
           <button id="btnOpenSearch" type="button" class="p-2 text-neutral-700 hover:text-neutral-950 transition-colors" title="상품 검색" aria-label="검색창 열기">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           </button>
 
-          <!-- Shopping Bag Button -->
           <button id="btnOpenCart" type="button" class="relative p-2 text-neutral-700 hover:text-neutral-950 transition-colors flex items-center" title="쇼핑백" aria-label="쇼핑백 열기">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             <span class="cart-count-badge absolute -top-1 -right-1 bg-pink-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center tabular-nums">0</span>
           </button>
 
-          <!-- Mobile Menu Button -->
           <button id="btnMobileMenu" type="button" class="md:hidden p-2 text-neutral-700 hover:text-neutral-950" title="메뉴" aria-label="메뉴 열기">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
           </button>
@@ -84,14 +101,12 @@
         <div class="relative w-full aspect-[16/9] min-h-[480px] max-h-[780px] flex items-center justify-center overflow-hidden">
           <img
             id="heroImage"
-            src="/assets/images/hero_campaign.jpg"
+            src="./assets/images/hero_campaign.jpg"
             alt="SCULPTOR 2026 FW Campaign"
             class="w-full h-full object-cover object-center scale-100 will-change-transform"
           />
-          <!-- High-fashion subtle gradient overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
 
-          <!-- Bottom Campaign Headline -->
           <div class="absolute bottom-6 sm:bottom-12 left-0 right-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
             <div>
               <p class="font-editorial-sans text-xs sm:text-sm tracking-widest text-pink-300 font-semibold uppercase mb-1">
@@ -124,7 +139,6 @@
             <p class="text-xs sm:text-sm text-neutral-500 mt-1">2026 FW 시즌 가장 먼저 선보이는 스컬프터 신작 라인업</p>
           </div>
 
-          <!-- Swiper Navigation Arrows -->
           <div class="flex items-center gap-2">
             <button class="swiper-btn-prev-drop w-10 h-10 border border-neutral-300 rounded-full flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors" title="이전 상품">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
@@ -138,11 +152,11 @@
         <!-- Swiper Container -->
         <div class="swiper new-drop-swiper overflow-visible">
           <div class="swiper-wrapper">
-            <!-- Product 1: Teal Hoodie -->
+            <!-- Product 1 -->
             <div class="swiper-slide product-card group">
               <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
                 <img
-                  src="/assets/images/drop_teal_hoodie.png"
+                  src="./assets/images/drop_teal_hoodie.png"
                   alt="Velour Track Hooded Zip-Up Teal"
                   class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
                 />
@@ -173,11 +187,11 @@
               </div>
             </div>
 
-            <!-- Product 2: Fur Coat -->
+            <!-- Product 2 -->
             <div class="swiper-slide product-card group">
               <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
                 <img
-                  src="/assets/images/drop_fur_coat.png"
+                  src="./assets/images/drop_fur_coat.png"
                   alt="Faux Shaggy Fur Coat Raw"
                   class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
                 />
@@ -208,11 +222,11 @@
               </div>
             </div>
 
-            <!-- Product 3: Boyfriend Shirt -->
+            <!-- Product 3 -->
             <div class="swiper-slide product-card group">
               <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
                 <img
-                  src="/assets/images/drop_boyfriend_shirt.png"
+                  src="./assets/images/drop_boyfriend_shirt.png"
                   alt="Boyfriend Hooded Shirts Navy Check"
                   class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
                 />
@@ -243,11 +257,11 @@
               </div>
             </div>
 
-            <!-- Product 4: Chainmail Bag -->
+            <!-- Product 4 -->
             <div class="swiper-slide product-card group">
               <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
                 <img
-                  src="/assets/images/drop_chainmail_bag.png"
+                  src="./assets/images/drop_chainmail_bag.png"
                   alt="Cross Chainmail Big Bag Turquoise"
                   class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
                 />
@@ -286,7 +300,7 @@
         <a href="#style-edit" class="group block relative overflow-hidden rounded-sm bg-neutral-950 y2k-glow-hover">
           <div class="relative w-full aspect-[16/7] sm:aspect-[21/8] min-h-[220px]">
             <img
-              src="/assets/images/banner_full_release.jpg"
+              src="./assets/images/banner_full_release.jpg"
               alt="FULL RELEASE 스컬프터 FW26 컬렉션"
               class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 opacity-90"
             />
@@ -314,7 +328,7 @@
         </a>
       </section>
 
-      <!-- 4. STYLE EDIT (Collage + Lookbook Hotspots) -->
+      <!-- 4. STYLE EDIT (Lookbook + Hotspots) -->
       <section id="style-edit" class="py-12 sm:py-20 bg-[#fafafa] border-y border-neutral-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-xl mx-auto mb-12 sm:mb-16">
@@ -329,7 +343,7 @@
             <div class="lg:col-span-5 relative flex justify-center">
               <div class="relative max-w-[420px] w-full">
                 <img
-                  src="/assets/images/style_look_hero.png"
+                  src="./assets/images/style_look_hero.png"
                   alt="Style Edit Main Look"
                   class="w-full h-auto object-contain filter drop-shadow-md select-none"
                 />
@@ -375,10 +389,9 @@
 
             <!-- Right: 4 Editorial Lookbook Tiles -->
             <div class="lg:col-span-7 grid grid-cols-2 gap-4 sm:gap-6">
-              <!-- Look 1 -->
               <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="fur-coat">
                 <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
-                  <img src="/assets/images/style_look_1.png" alt="Style Look 1" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <img src="./assets/images/style_look_1.png" alt="Style Look 1" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div class="flex justify-between items-center text-xs">
                   <div>
@@ -389,10 +402,9 @@
                 </div>
               </div>
 
-              <!-- Look 2 -->
               <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="slouch-bag">
                 <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
-                  <img src="/assets/images/style_look_2.png" alt="Style Look 2" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <img src="./assets/images/style_look_2.png" alt="Style Look 2" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div class="flex justify-between items-center text-xs">
                   <div>
@@ -403,10 +415,9 @@
                 </div>
               </div>
 
-              <!-- Look 3 -->
               <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="napoleon-bomber">
                 <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
-                  <img src="/assets/images/style_look_3.png" alt="Style Look 3" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <img src="./assets/images/style_look_3.png" alt="Style Look 3" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div class="flex justify-between items-center text-xs">
                   <div>
@@ -417,10 +428,9 @@
                 </div>
               </div>
 
-              <!-- Look 4 -->
               <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="boyfriend-shirt">
                 <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
-                  <img src="/assets/images/style_look_4.png" alt="Style Look 4" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <img src="./assets/images/style_look_4.png" alt="Style Look 4" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div class="flex justify-between items-center text-xs">
                   <div>
@@ -433,10 +443,10 @@
             </div>
           </div>
 
-          <!-- Y2K Ornamental Chrome Divider Graphic 1 -->
+          <!-- Y2K Ornamental Chrome Divider 1 -->
           <div class="ornament-divider mt-16 sm:mt-20 flex justify-center">
             <img
-              src="/assets/images/ornament_divider_1.png"
+              src="./assets/images/ornament_divider_1.png"
               alt="Sculptor ornamental divider"
               class="max-w-[700px] w-full h-auto object-contain opacity-75 filter drop-shadow-sm select-none"
             />
@@ -444,7 +454,7 @@
         </div>
       </section>
 
-      <!-- 5. BEST SELLER SECTION (5 Curated Items) -->
+      <!-- 5. BEST SELLER SECTION -->
       <section id="best-seller" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-xl mx-auto mb-12 sm:mb-16">
           <h2 class="reveal-heading font-editorial-serif text-3xl sm:text-4xl text-neutral-950 tracking-tight lowercase">
@@ -454,11 +464,11 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-          <!-- Item 1: Napoleon Bomber -->
+          <!-- Item 1 -->
           <div class="product-card group flex flex-col">
             <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
               <img
-                src="/assets/images/best_bomber.png"
+                src="./assets/images/best_bomber.png"
                 alt="Napoleon Bomber Jacket Beige"
                 class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
               />
@@ -490,11 +500,11 @@
             </div>
           </div>
 
-          <!-- Item 2: Long Sleeve -->
+          <!-- Item 2 -->
           <div class="product-card group flex flex-col">
             <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
               <img
-                src="/assets/images/best_longsleeve.png"
+                src="./assets/images/best_longsleeve.png"
                 alt="My Go To Long Sleeve Be Mine"
                 class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
               />
@@ -526,11 +536,11 @@
             </div>
           </div>
 
-          <!-- Item 3: Glow In The Dark Hoodie -->
+          <!-- Item 3 -->
           <div class="product-card group flex flex-col">
             <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
               <img
-                src="/assets/images/best_glow_hoodie.png"
+                src="./assets/images/best_glow_hoodie.png"
                 alt="Glow In The Dark Zip-Up Hoodie White"
                 class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
               />
@@ -562,11 +572,11 @@
             </div>
           </div>
 
-          <!-- Item 4: Faithless Jeans -->
+          <!-- Item 4 -->
           <div class="product-card group flex flex-col">
             <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
               <img
-                src="/assets/images/best_faithless_jeans.png"
+                src="./assets/images/best_faithless_jeans.png"
                 alt="Faithless Jeans Light Blue"
                 class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
               />
@@ -598,11 +608,11 @@
             </div>
           </div>
 
-          <!-- Item 5: Quilted Slouch Bag -->
+          <!-- Item 5 -->
           <div class="product-card group flex flex-col">
             <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
               <img
-                src="/assets/images/best_slouch_bag.png"
+                src="./assets/images/best_slouch_bag.png"
                 alt="Quilted Slouch Bag Mauve"
                 class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
               />
@@ -635,10 +645,10 @@
           </div>
         </div>
 
-        <!-- Ornamental Chrome Divider Graphic 2 -->
+        <!-- Ornamental Chrome Divider 2 -->
         <div class="ornament-divider mt-16 sm:mt-24 flex justify-center">
           <img
-            src="/assets/images/ornament_divider_2.png"
+            src="./assets/images/ornament_divider_2.png"
             alt="Sculptor ornamental scroll divider"
             class="max-w-[600px] w-full h-auto object-contain opacity-75 filter drop-shadow-sm select-none"
           />
@@ -656,11 +666,10 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            <!-- Tile 1: The Hyundai Seoul PopUp -->
             <div id="btnHyundaiPopup" class="group relative rounded-sm overflow-hidden bg-neutral-950 cursor-pointer shadow-sm">
               <div class="aspect-[16/9] w-full overflow-hidden">
                 <img
-                  src="/assets/images/inside_hyundai_seoul.jpg"
+                  src="./assets/images/inside_hyundai_seoul.jpg"
                   alt="The Hyundai Seoul PopUp"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -674,11 +683,10 @@
               </div>
             </div>
 
-            <!-- Tile 2: BTS Video -->
             <div id="btnBtsVideo" class="group relative rounded-sm overflow-hidden bg-neutral-950 cursor-pointer shadow-sm">
               <div class="aspect-[16/9] w-full overflow-hidden">
                 <img
-                  src="/assets/images/inside_bts_photoshoot.jpg"
+                  src="./assets/images/inside_bts_photoshoot.jpg"
                   alt="FW26 Photoshoot Behind the Scenes"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -702,7 +710,6 @@
     <!-- FOOTER -->
     <footer class="bg-[#141416] text-neutral-400 text-xs py-14 border-t border-neutral-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Top Links -->
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 pb-8 border-b border-neutral-800 text-[11px] font-medium tracking-wider text-neutral-300">
           <a href="#" class="hover:text-white transition-colors">NOTICE</a>
           <a href="#" class="hover:text-white transition-colors">GUIDE</a>
@@ -712,7 +719,6 @@
           <a href="#" class="hover:text-white transition-colors">STORE</a>
         </div>
 
-        <!-- Middle: Corporate & CS Info -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 text-[11px] leading-relaxed text-neutral-400">
           <div>
             <h5 class="text-white font-semibold mb-2 font-editorial-serif text-base tracking-tight">ROOTS CORPORATION CO., LTD.</h5>
@@ -728,7 +734,6 @@
           </div>
         </div>
 
-        <!-- Bottom Copyright -->
         <div class="pt-6 border-t border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500">
           <p>© SCULPTOR 2026. ALL RIGHTS RESERVED.</p>
           <div class="flex items-center gap-4 text-neutral-400">
@@ -740,14 +745,10 @@
       </div>
     </footer>
 
-    <!-- ======================================================== -->
-    <!-- OVERLAYS: CART DRAWER, QUICK VIEW, SEARCH, INSIDE MEDIA -->
-    <!-- ======================================================== -->
-
-    <!-- 1. SLIDE-OUT CART DRAWER -->
+    <!-- OVERLAYS -->
+    <!-- 1. CART DRAWER -->
     <div id="cartBackdrop" class="fixed inset-0 bg-black/60 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
     <div id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out" role="dialog" aria-modal="true" aria-label="쇼핑백">
-      <!-- Drawer Header -->
       <div class="p-4 border-b border-neutral-100 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <h3 class="font-editorial-serif text-lg font-bold tracking-tight text-neutral-900">SHOPPING BAG</h3>
@@ -758,7 +759,6 @@
         </button>
       </div>
 
-      <!-- Free Shipping Meter -->
       <div class="bg-neutral-50 px-4 py-2.5 border-b border-neutral-100">
         <div class="flex justify-between items-center text-[11px] text-neutral-600 mb-1">
           <span id="freeShippingText">100,000원 추가 구매 시 무료배송</span>
@@ -769,17 +769,14 @@
         </div>
       </div>
 
-      <!-- Drawer Items Container -->
       <div id="cartItemsList" class="flex-1 overflow-y-auto divide-y divide-neutral-100"></div>
 
-      <!-- Empty State -->
       <div id="cartEmptyState" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center text-neutral-400">
         <svg class="w-12 h-12 stroke-[1.2] mb-3 text-neutral-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <p class="text-xs font-medium text-neutral-700">쇼핑백이 비어있습니다.</p>
         <p class="text-[11px] mt-1">2026 FW 신상품을 둘러보고 마음에 드는 상품을 담아보세요.</p>
       </div>
 
-      <!-- Drawer Footer -->
       <div class="p-4 border-t border-neutral-100 bg-white space-y-3">
         <div class="flex items-center justify-between text-sm">
           <span class="text-neutral-500 font-medium">Subtotal</span>
@@ -801,12 +798,10 @@
         </button>
 
         <div class="grid grid-cols-1 sm:grid-cols-2">
-          <!-- Modal Image -->
           <div class="bg-neutral-50 p-6 flex items-center justify-center min-h-[300px]">
             <img id="modalImage" src="" alt="" class="max-h-[380px] w-auto object-contain mix-blend-multiply" />
           </div>
 
-          <!-- Modal Details -->
           <div class="p-6 flex flex-col justify-between space-y-4">
             <div>
               <span id="modalCategory" class="text-[10px] uppercase tracking-wider text-pink-600 font-mono font-semibold"></span>
@@ -820,19 +815,16 @@
 
               <p id="modalDesc" class="text-xs text-neutral-600 leading-relaxed mt-3 border-t border-neutral-100 pt-3"></p>
 
-              <!-- Size Selection -->
               <div class="mt-4">
                 <span class="text-xs font-semibold text-neutral-900 block mb-1.5">Size</span>
                 <div id="modalSizeOptions" class="flex flex-wrap gap-1.5"></div>
               </div>
 
-              <!-- Color Selection -->
               <div class="mt-3">
                 <span class="text-xs font-semibold text-neutral-900 block mb-1.5">Color</span>
                 <div id="modalColorOptions" class="flex flex-wrap gap-1.5"></div>
               </div>
 
-              <!-- Quantity -->
               <div class="mt-4 flex items-center gap-3">
                 <span class="text-xs font-semibold text-neutral-900">Quantity</span>
                 <div class="flex items-center border border-neutral-200 rounded text-xs">
@@ -843,7 +835,6 @@
               </div>
             </div>
 
-            <!-- Add to Bag CTA -->
             <button id="modalAddToBag" class="w-full py-3 bg-neutral-950 text-white text-xs font-semibold tracking-wider uppercase hover:bg-pink-600 transition-colors shadow-sm">
               Add to Bag
             </button>
@@ -917,7 +908,18 @@
       <span id="toastMessage">상품이 백에 담겼습니다.</span>
     </div>
 
-    <!-- Pure Vanilla JS Entry Point -->
-    <script type="module" src="/src/main.js"></script>
+    <!-- ========================================== -->
+    <!-- OFFICIAL CDN SCRIPTS (NO-BUILD / ZERO-DEPENDENCY) -->
+    <!-- ========================================== -->
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Pure Standalone Vanilla JS -->
+    <script src="./main.js"></script>
   </body>
 </html>
