@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCULPTOR — 2026 FW Official Store</title>
+    <meta name="description" content="SCULPTOR (스컬프터) 2026 FW 컬렉션 공식 브랜드 스토어 및 룩북." />
+    <meta property="og:title" content="SCULPTOR — 2026 FW Official Store" />
+    <meta property="og:description" content="SCULPTOR (스컬프터) 2026 FW 컬렉션 공식 브랜드 스토어 및 룩북." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Bodoni Moda (Editorial Display) & Syne (Modern Avant-Garde) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Pretendard Korean Web Font -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-white text-neutral-900 selection:bg-pink-500 selection:text-white">
+    <!-- Custom Magnetic Cursor (Desktop) -->
+    <div class="custom-cursor-dot hidden md:block" aria-hidden="true"></div>
+    <div class="custom-cursor-ring hidden md:block" aria-hidden="true"></div>
+
+    <!-- Announcement Bar -->
+    <aside class="bg-neutral-950 text-neutral-300 text-[11px] py-1.5 px-4 text-center tracking-wider font-light flex items-center justify-center gap-2 border-b border-neutral-800">
+      <span class="text-pink-400 font-medium">SCULPTOR 2026 FW DROP</span>
+      <span aria-hidden="true">·</span>
+      <span>신규 가입 시 10% 웰컴 쿠폰 & 전 상품 무료배송 혜택</span>
+    </aside>
+
+    <!-- Top Navigation Bar (Strict 3-Zone Contract) -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-neutral-100 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+        <!-- Zone 1: Single Brand Wordmark -->
+        <a href="#" class="font-editorial-serif text-2xl sm:text-3xl font-extrabold tracking-tighter text-neutral-950 hover:opacity-85 transition-opacity whitespace-nowrap shrink-0">
+          SCULPTOR
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium tracking-wide text-neutral-600 font-editorial-sans">
+          <a href="#new-drop" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">NEW DROP</a>
+          <a href="#full-release" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">FULL RELEASE</a>
+          <a href="#style-edit" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">STYLE EDIT</a>
+          <a href="#best-seller" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">BEST SELLER</a>
+          <a href="#inside-sculptor" class="hover:text-neutral-950 transition-colors whitespace-nowrap shrink-0">INSIDE SCULPTOR</a>
+        </nav>
+
+        <!-- Zone 3: Primary Action & Utilities -->
+        <div class="flex items-center gap-4 shrink-0">
+          <!-- Search Button -->
+          <button id="btnOpenSearch" type="button" class="p-2 text-neutral-700 hover:text-neutral-950 transition-colors" title="상품 검색" aria-label="검색창 열기">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+
+          <!-- Shopping Bag Button -->
+          <button id="btnOpenCart" type="button" class="relative p-2 text-neutral-700 hover:text-neutral-950 transition-colors flex items-center" title="쇼핑백" aria-label="쇼핑백 열기">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-count-badge absolute -top-1 -right-1 bg-pink-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center tabular-nums">0</span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button id="btnMobileMenu" type="button" class="md:hidden p-2 text-neutral-700 hover:text-neutral-950" title="메뉴" aria-label="메뉴 열기">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 1. HERO CAMPAIGN SECTION -->
+      <section id="heroSection" class="relative w-full overflow-hidden bg-neutral-900 border-b border-neutral-200">
+        <div class="relative w-full aspect-[16/9] min-h-[480px] max-h-[780px] flex items-center justify-center overflow-hidden">
+          <img
+            id="heroImage"
+            src="/assets/images/hero_campaign.jpg"
+            alt="SCULPTOR 2026 FW Campaign"
+            class="w-full h-full object-cover object-center scale-100 will-change-transform"
+          />
+          <!-- High-fashion subtle gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+
+          <!-- Bottom Campaign Headline -->
+          <div class="absolute bottom-6 sm:bottom-12 left-0 right-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
+            <div>
+              <p class="font-editorial-sans text-xs sm:text-sm tracking-widest text-pink-300 font-semibold uppercase mb-1">
+                2026 Fall / Winter Collection
+              </p>
+              <h1 class="font-editorial-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white/95">
+                SCULPTOR FW26
+              </h1>
+            </div>
+            <div class="flex items-center gap-3">
+              <a
+                href="#new-drop"
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-neutral-950 text-xs font-semibold tracking-wider uppercase rounded-none hover:bg-neutral-100 transition-colors shadow-sm"
+              >
+                <span>Explore Drop</span>
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. NEW DROP SECTION (Swiper Carousel) -->
+      <section id="new-drop" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between mb-8 sm:mb-12">
+          <div>
+            <h2 class="reveal-heading font-editorial-serif text-3xl sm:text-4xl text-neutral-950 tracking-tight lowercase">
+              New drop
+            </h2>
+            <p class="text-xs sm:text-sm text-neutral-500 mt-1">2026 FW 시즌 가장 먼저 선보이는 스컬프터 신작 라인업</p>
+          </div>
+
+          <!-- Swiper Navigation Arrows -->
+          <div class="flex items-center gap-2">
+            <button class="swiper-btn-prev-drop w-10 h-10 border border-neutral-300 rounded-full flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors" title="이전 상품">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="swiper-btn-next-drop w-10 h-10 border border-neutral-300 rounded-full flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors" title="다음 상품">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper new-drop-swiper overflow-visible">
+          <div class="swiper-wrapper">
+            <!-- Product 1: Teal Hoodie -->
+            <div class="swiper-slide product-card group">
+              <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
+                <img
+                  src="/assets/images/drop_teal_hoodie.png"
+                  alt="Velour Track Hooded Zip-Up Teal"
+                  class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                />
+                <button
+                  type="button"
+                  data-quick-view="teal-hoodie"
+                  class="quick-view-btn absolute bottom-3 inset-x-3 py-2.5 bg-neutral-950/90 hover:bg-neutral-950 text-white text-xs font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span>Quick View</span>
+                </button>
+              </div>
+              <div class="mt-3">
+                <span class="text-[11px] uppercase tracking-wider text-neutral-400 font-mono">Top / Hoodie</span>
+                <h3 class="text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Velour Track Hooded Zip-Up Teal
+                </h3>
+                <div class="flex items-center justify-between mt-1.5">
+                  <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩178,200</span>
+                  <button
+                    type="button"
+                    data-direct-add="teal-hoodie"
+                    class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4 transition-colors"
+                  >
+                    + Bag
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2: Fur Coat -->
+            <div class="swiper-slide product-card group">
+              <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
+                <img
+                  src="/assets/images/drop_fur_coat.png"
+                  alt="Faux Shaggy Fur Coat Raw"
+                  class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                />
+                <button
+                  type="button"
+                  data-quick-view="fur-coat"
+                  class="quick-view-btn absolute bottom-3 inset-x-3 py-2.5 bg-neutral-950/90 hover:bg-neutral-950 text-white text-xs font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span>Quick View</span>
+                </button>
+              </div>
+              <div class="mt-3">
+                <span class="text-[11px] uppercase tracking-wider text-neutral-400 font-mono">Outer / Fur</span>
+                <h3 class="text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Faux Shaggy Fur Coat Raw
+                </h3>
+                <div class="flex items-center justify-between mt-1.5">
+                  <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩237,150</span>
+                  <button
+                    type="button"
+                    data-direct-add="fur-coat"
+                    class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4 transition-colors"
+                  >
+                    + Bag
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3: Boyfriend Shirt -->
+            <div class="swiper-slide product-card group">
+              <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
+                <img
+                  src="/assets/images/drop_boyfriend_shirt.png"
+                  alt="Boyfriend Hooded Shirts Navy Check"
+                  class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                />
+                <button
+                  type="button"
+                  data-quick-view="boyfriend-shirt"
+                  class="quick-view-btn absolute bottom-3 inset-x-3 py-2.5 bg-neutral-950/90 hover:bg-neutral-950 text-white text-xs font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span>Quick View</span>
+                </button>
+              </div>
+              <div class="mt-3">
+                <span class="text-[11px] uppercase tracking-wider text-neutral-400 font-mono">Top / Shirts</span>
+                <h3 class="text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Boyfriend Hooded Shirts Navy Check
+                </h3>
+                <div class="flex items-center justify-between mt-1.5">
+                  <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩149,400</span>
+                  <button
+                    type="button"
+                    data-direct-add="boyfriend-shirt"
+                    class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4 transition-colors"
+                  >
+                    + Bag
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4: Chainmail Bag -->
+            <div class="swiper-slide product-card group">
+              <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-4">
+                <img
+                  src="/assets/images/drop_chainmail_bag.png"
+                  alt="Cross Chainmail Big Bag Turquoise"
+                  class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+                />
+                <button
+                  type="button"
+                  data-quick-view="chainmail-bag"
+                  class="quick-view-btn absolute bottom-3 inset-x-3 py-2.5 bg-neutral-950/90 hover:bg-neutral-950 text-white text-xs font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span>Quick View</span>
+                </button>
+              </div>
+              <div class="mt-3">
+                <span class="text-[11px] uppercase tracking-wider text-neutral-400 font-mono">Acc / Bag</span>
+                <h3 class="text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Cross Chainmail Big Bag Turquoise
+                </h3>
+                <div class="flex items-center justify-between mt-1.5">
+                  <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩233,100</span>
+                  <button
+                    type="button"
+                    data-direct-add="chainmail-bag"
+                    class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4 transition-colors"
+                  >
+                    + Bag
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FULL RELEASE BANNER SECTION -->
+      <section id="full-release" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+        <a href="#style-edit" class="group block relative overflow-hidden rounded-sm bg-neutral-950 y2k-glow-hover">
+          <div class="relative w-full aspect-[16/7] sm:aspect-[21/8] min-h-[220px]">
+            <img
+              src="/assets/images/banner_full_release.jpg"
+              alt="FULL RELEASE 스컬프터 FW26 컬렉션"
+              class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700 opacity-90"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+
+            <div class="absolute inset-0 p-6 sm:p-10 flex flex-col justify-between text-white">
+              <div class="flex items-center gap-2">
+                <span class="text-[11px] font-mono tracking-widest text-pink-400 uppercase font-semibold">Campaign 01</span>
+                <span class="text-white/40">/</span>
+                <span class="text-[11px] text-white/80">Fall Winter 2026</span>
+              </div>
+              <div class="flex items-end justify-between">
+                <div>
+                  <h3 class="font-editorial-serif text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white uppercase leading-tight">
+                    FULL RELEASE
+                  </h3>
+                  <p class="text-xs sm:text-sm text-neutral-300 mt-1 font-light">스컬프터 FW26 컬렉션 전 라인업 바로보기</p>
+                </div>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-neutral-950 transition-all">
+                  <svg class="w-5 h-5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- 4. STYLE EDIT (Collage + Lookbook Hotspots) -->
+      <section id="style-edit" class="py-12 sm:py-20 bg-[#fafafa] border-y border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-xl mx-auto mb-12 sm:mb-16">
+            <h2 class="reveal-heading font-editorial-serif text-3xl sm:text-4xl text-neutral-950 tracking-tight lowercase">
+              style edit
+            </h2>
+            <p class="text-xs sm:text-sm text-neutral-500 mt-1.5">런웨이 룩북 속 모델 착장 피스를 클릭하여 상세 정보와 스타일링을 확인해보세요.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left: Featured Model Look with Hotspot Pins -->
+            <div class="lg:col-span-5 relative flex justify-center">
+              <div class="relative max-w-[420px] w-full">
+                <img
+                  src="/assets/images/style_look_hero.png"
+                  alt="Style Edit Main Look"
+                  class="w-full h-auto object-contain filter drop-shadow-md select-none"
+                />
+
+                <!-- Hotspot 1: Faithless Jeans -->
+                <button
+                  type="button"
+                  data-hotspot-target="faithless-jeans"
+                  class="hotspot-pin absolute top-[68%] left-[45%] w-7 h-7 bg-white/95 text-neutral-950 rounded-full flex items-center justify-center font-bold text-xs shadow-lg border border-pink-400 hover:scale-125 transition-transform"
+                  title="Faithless Jeans 바로보기"
+                  aria-label="Faithless Jeans 상품 보기"
+                >
+                  <svg class="w-3.5 h-3.5 text-pink-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+
+                <!-- Hotspot 2: Lace Corset Top -->
+                <button
+                  type="button"
+                  data-hotspot-target="lace-corset"
+                  class="hotspot-pin absolute top-[36%] left-[48%] w-7 h-7 bg-white/95 text-neutral-950 rounded-full flex items-center justify-center font-bold text-xs shadow-lg border border-pink-400 hover:scale-125 transition-transform"
+                  title="Lace Corset Top 바로보기"
+                  aria-label="Lace Corset Top 상품 보기"
+                >
+                  <svg class="w-3.5 h-3.5 text-pink-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+
+                <!-- Hotspot 3: Cyber Tiara -->
+                <button
+                  type="button"
+                  data-hotspot-target="cyber-tiara"
+                  class="hotspot-pin absolute top-[12%] left-[46%] w-7 h-7 bg-white/95 text-neutral-950 rounded-full flex items-center justify-center font-bold text-xs shadow-lg border border-pink-400 hover:scale-125 transition-transform"
+                  title="Cyber Tiara 바로보기"
+                  aria-label="Cyber Tiara 상품 보기"
+                >
+                  <svg class="w-3.5 h-3.5 text-pink-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+
+                <div class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-sm border border-neutral-200 px-3 py-1 rounded text-[11px] text-neutral-600 whitespace-nowrap shadow-xs">
+                  ✨ 핀 아이콘을 터치하여 착장 상품 보기
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: 4 Editorial Lookbook Tiles -->
+            <div class="lg:col-span-7 grid grid-cols-2 gap-4 sm:gap-6">
+              <!-- Look 1 -->
+              <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="fur-coat">
+                <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
+                  <img src="/assets/images/style_look_1.png" alt="Style Look 1" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <div>
+                    <span class="text-[10px] text-neutral-400 font-mono">LOOK 01</span>
+                    <h4 class="font-semibold text-neutral-900 group-hover:text-pink-600 transition-colors">Pink Puffer & Skirt</h4>
+                  </div>
+                  <span class="text-neutral-400 group-hover:text-neutral-900 font-medium">View &rarr;</span>
+                </div>
+              </div>
+
+              <!-- Look 2 -->
+              <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="slouch-bag">
+                <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
+                  <img src="/assets/images/style_look_2.png" alt="Style Look 2" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <div>
+                    <span class="text-[10px] text-neutral-400 font-mono">LOOK 02</span>
+                    <h4 class="font-semibold text-neutral-900 group-hover:text-pink-600 transition-colors">Foldover High Neck</h4>
+                  </div>
+                  <span class="text-neutral-400 group-hover:text-neutral-900 font-medium">View &rarr;</span>
+                </div>
+              </div>
+
+              <!-- Look 3 -->
+              <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="napoleon-bomber">
+                <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
+                  <img src="/assets/images/style_look_3.png" alt="Style Look 3" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <div>
+                    <span class="text-[10px] text-neutral-400 font-mono">LOOK 03</span>
+                    <h4 class="font-semibold text-neutral-900 group-hover:text-pink-600 transition-colors">Utility Raw Bomber</h4>
+                  </div>
+                  <span class="text-neutral-400 group-hover:text-neutral-900 font-medium">View &rarr;</span>
+                </div>
+              </div>
+
+              <!-- Look 4 -->
+              <div class="group bg-white p-3 rounded-sm border border-neutral-100 shadow-xs hover:border-pink-300 transition-all cursor-pointer" data-quick-view="boyfriend-shirt">
+                <div class="aspect-[3/4] bg-neutral-50 rounded-sm overflow-hidden mb-2.5 flex items-center justify-center">
+                  <img src="/assets/images/style_look_4.png" alt="Style Look 4" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <div>
+                    <span class="text-[10px] text-neutral-400 font-mono">LOOK 04</span>
+                    <h4 class="font-semibold text-neutral-900 group-hover:text-pink-600 transition-colors">Cyber Plaid Mini</h4>
+                  </div>
+                  <span class="text-neutral-400 group-hover:text-neutral-900 font-medium">View &rarr;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Y2K Ornamental Chrome Divider Graphic 1 -->
+          <div class="ornament-divider mt-16 sm:mt-20 flex justify-center">
+            <img
+              src="/assets/images/ornament_divider_1.png"
+              alt="Sculptor ornamental divider"
+              class="max-w-[700px] w-full h-auto object-contain opacity-75 filter drop-shadow-sm select-none"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. BEST SELLER SECTION (5 Curated Items) -->
+      <section id="best-seller" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-12 sm:mb-16">
+          <h2 class="reveal-heading font-editorial-serif text-3xl sm:text-4xl text-neutral-950 tracking-tight lowercase">
+            best seller
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-500 mt-1">스컬프터 매니아들이 가장 사랑하는 베스트셀러 아이템</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+          <!-- Item 1: Napoleon Bomber -->
+          <div class="product-card group flex flex-col">
+            <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
+              <img
+                src="/assets/images/best_bomber.png"
+                alt="Napoleon Bomber Jacket Beige"
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+              />
+              <button
+                type="button"
+                data-quick-view="napoleon-bomber"
+                class="quick-view-btn absolute bottom-3 inset-x-3 py-2 bg-neutral-950/90 hover:bg-neutral-950 text-white text-[11px] font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1 shadow-sm"
+              >
+                <span>Quick View</span>
+              </button>
+            </div>
+            <div class="mt-3 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-mono">Outer</span>
+                <h3 class="text-xs sm:text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Napoleon Bomber Jacket Beige
+                </h3>
+              </div>
+              <div class="flex items-center justify-between mt-1.5 pt-1">
+                <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩224,100</span>
+                <button
+                  type="button"
+                  data-direct-add="napoleon-bomber"
+                  class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4"
+                >
+                  + Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Long Sleeve -->
+          <div class="product-card group flex flex-col">
+            <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
+              <img
+                src="/assets/images/best_longsleeve.png"
+                alt="My Go To Long Sleeve Be Mine"
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+              />
+              <button
+                type="button"
+                data-quick-view="longsleeve-be-mine"
+                class="quick-view-btn absolute bottom-3 inset-x-3 py-2 bg-neutral-950/90 hover:bg-neutral-950 text-white text-[11px] font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1 shadow-sm"
+              >
+                <span>Quick View</span>
+              </button>
+            </div>
+            <div class="mt-3 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-mono">Top</span>
+                <h3 class="text-xs sm:text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  My Go To Long Sleeve Be Mine
+                </h3>
+              </div>
+              <div class="flex items-center justify-between mt-1.5 pt-1">
+                <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩64,800</span>
+                <button
+                  type="button"
+                  data-direct-add="longsleeve-be-mine"
+                  class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4"
+                >
+                  + Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Glow In The Dark Hoodie -->
+          <div class="product-card group flex flex-col">
+            <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
+              <img
+                src="/assets/images/best_glow_hoodie.png"
+                alt="Glow In The Dark Zip-Up Hoodie White"
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+              />
+              <button
+                type="button"
+                data-quick-view="glow-hoodie"
+                class="quick-view-btn absolute bottom-3 inset-x-3 py-2 bg-neutral-950/90 hover:bg-neutral-950 text-white text-[11px] font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1 shadow-sm"
+              >
+                <span>Quick View</span>
+              </button>
+            </div>
+            <div class="mt-3 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-mono">Hoodie</span>
+                <h3 class="text-xs sm:text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Glow In The Dark Zip-Up White
+                </h3>
+              </div>
+              <div class="flex items-center justify-between mt-1.5 pt-1">
+                <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩104,300</span>
+                <button
+                  type="button"
+                  data-direct-add="glow-hoodie"
+                  class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4"
+                >
+                  + Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Faithless Jeans -->
+          <div class="product-card group flex flex-col">
+            <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
+              <img
+                src="/assets/images/best_faithless_jeans.png"
+                alt="Faithless Jeans Light Blue"
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+              />
+              <button
+                type="button"
+                data-quick-view="faithless-jeans"
+                class="quick-view-btn absolute bottom-3 inset-x-3 py-2 bg-neutral-950/90 hover:bg-neutral-950 text-white text-[11px] font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1 shadow-sm"
+              >
+                <span>Quick View</span>
+              </button>
+            </div>
+            <div class="mt-3 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-mono">Denim</span>
+                <h3 class="text-xs sm:text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Faithless Jeans Light Blue
+                </h3>
+              </div>
+              <div class="flex items-center justify-between mt-1.5 pt-1">
+                <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩224,100</span>
+                <button
+                  type="button"
+                  data-direct-add="faithless-jeans"
+                  class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4"
+                >
+                  + Bag
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Quilted Slouch Bag -->
+          <div class="product-card group flex flex-col">
+            <div class="relative bg-[#f8f8f9] rounded-sm overflow-hidden aspect-[3/4] flex items-center justify-center p-3">
+              <img
+                src="/assets/images/best_slouch_bag.png"
+                alt="Quilted Slouch Bag Mauve"
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500"
+              />
+              <button
+                type="button"
+                data-quick-view="slouch-bag"
+                class="quick-view-btn absolute bottom-3 inset-x-3 py-2 bg-neutral-950/90 hover:bg-neutral-950 text-white text-[11px] font-medium backdrop-blur-sm transition-all text-center flex items-center justify-center gap-1 shadow-sm"
+              >
+                <span>Quick View</span>
+              </button>
+            </div>
+            <div class="mt-3 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-mono">Bag</span>
+                <h3 class="text-xs sm:text-sm font-semibold text-neutral-900 mt-0.5 truncate group-hover:text-pink-600 transition-colors">
+                  Quilted Slouch Bag Mauve
+                </h3>
+              </div>
+              <div class="flex items-center justify-between mt-1.5 pt-1">
+                <span class="text-xs sm:text-sm font-semibold text-neutral-950 tabular-nums">₩129,600</span>
+                <button
+                  type="button"
+                  data-direct-add="slouch-bag"
+                  class="text-[11px] text-neutral-500 hover:text-neutral-950 font-medium underline underline-offset-4"
+                >
+                  + Bag
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ornamental Chrome Divider Graphic 2 -->
+        <div class="ornament-divider mt-16 sm:mt-24 flex justify-center">
+          <img
+            src="/assets/images/ornament_divider_2.png"
+            alt="Sculptor ornamental scroll divider"
+            class="max-w-[600px] w-full h-auto object-contain opacity-75 filter drop-shadow-sm select-none"
+          />
+        </div>
+      </section>
+
+      <!-- 6. INSIDE SCULPTOR SECTION -->
+      <section id="inside-sculptor" class="py-12 sm:py-20 bg-[#fafafa] border-t border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-xl mx-auto mb-10 sm:mb-14">
+            <h2 class="reveal-heading font-editorial-serif text-3xl sm:text-4xl text-neutral-950 tracking-tight lowercase">
+              inside sculptor
+            </h2>
+            <p class="text-xs sm:text-sm text-neutral-500 mt-1">스컬프터의 문화와 팝업 스토어, 백스테이지 아카이브</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <!-- Tile 1: The Hyundai Seoul PopUp -->
+            <div id="btnHyundaiPopup" class="group relative rounded-sm overflow-hidden bg-neutral-950 cursor-pointer shadow-sm">
+              <div class="aspect-[16/9] w-full overflow-hidden">
+                <img
+                  src="/assets/images/inside_hyundai_seoul.jpg"
+                  alt="The Hyundai Seoul PopUp"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end text-white">
+                <span class="text-[10px] font-mono tracking-widest text-pink-400 uppercase font-semibold">Event Archive</span>
+                <h4 class="font-editorial-serif text-xl sm:text-2xl font-bold mt-1 group-hover:text-pink-300 transition-colors">
+                  The Hyundai Seoul Pop-Up
+                </h4>
+                <p class="text-xs text-neutral-300 mt-1 line-clamp-1">스컬프터 2026 FW 컬렉션 런칭 기념 더현대 서울 단독 팝업 스토어 정보</p>
+              </div>
+            </div>
+
+            <!-- Tile 2: BTS Video -->
+            <div id="btnBtsVideo" class="group relative rounded-sm overflow-hidden bg-neutral-950 cursor-pointer shadow-sm">
+              <div class="aspect-[16/9] w-full overflow-hidden">
+                <img
+                  src="/assets/images/inside_bts_photoshoot.jpg"
+                  alt="FW26 Photoshoot Behind the Scenes"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end text-white">
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-mono tracking-widest text-pink-400 uppercase font-semibold">Behind The Scenes</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                </div>
+                <h4 class="font-editorial-serif text-xl sm:text-2xl font-bold mt-1 group-hover:text-pink-300 transition-colors">
+                  FW26 Photoshoot Behind the Scenes
+                </h4>
+                <p class="text-xs text-neutral-300 mt-1 line-clamp-1">런던 로케이션 화보 촬영 현장 필름 및 디렉터스 컷</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#141416] text-neutral-400 text-xs py-14 border-t border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Top Links -->
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 pb-8 border-b border-neutral-800 text-[11px] font-medium tracking-wider text-neutral-300">
+          <a href="#" class="hover:text-white transition-colors">NOTICE</a>
+          <a href="#" class="hover:text-white transition-colors">GUIDE</a>
+          <a href="#" class="hover:text-white transition-colors">TERMS OF USE</a>
+          <a href="#" class="hover:text-white transition-colors text-pink-400">PRIVACY POLICY</a>
+          <a href="#" class="hover:text-white transition-colors">ABOUT</a>
+          <a href="#" class="hover:text-white transition-colors">STORE</a>
+        </div>
+
+        <!-- Middle: Corporate & CS Info -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 text-[11px] leading-relaxed text-neutral-400">
+          <div>
+            <h5 class="text-white font-semibold mb-2 font-editorial-serif text-base tracking-tight">ROOTS CORPORATION CO., LTD.</h5>
+            <p>대표자: 심영주 / 개인정보책임자: 서정식</p>
+            <p>사업자등록번호: 105-87-84852 / 통신판매업신고번호: 제 2017-서울마포-1188 호</p>
+            <p>주소: 서울특별시 마포구 와우산로35길 12 3층 (서교동)</p>
+          </div>
+          <div>
+            <h5 class="text-white font-semibold mb-2 font-editorial-sans tracking-wide">CUSTOMER SERVICE</h5>
+            <p class="text-sm font-semibold text-white">02-336-8488</p>
+            <p class="mt-1">운영시간: 10:00 - 17:00 (점심시간 12:30 - 13:30)</p>
+            <p>토/일요일 및 공휴일 휴무</p>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="pt-6 border-t border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500">
+          <p>© SCULPTOR 2026. ALL RIGHTS RESERVED.</p>
+          <div class="flex items-center gap-4 text-neutral-400">
+            <span>INSTAGRAM @sculptor_page</span>
+            <span aria-hidden="true">·</span>
+            <span>KAKAOTALK @sculptor</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================================================== -->
+    <!-- OVERLAYS: CART DRAWER, QUICK VIEW, SEARCH, INSIDE MEDIA -->
+    <!-- ======================================================== -->
+
+    <!-- 1. SLIDE-OUT CART DRAWER -->
+    <div id="cartBackdrop" class="fixed inset-0 bg-black/60 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out" role="dialog" aria-modal="true" aria-label="쇼핑백">
+      <!-- Drawer Header -->
+      <div class="p-4 border-b border-neutral-100 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <h3 class="font-editorial-serif text-lg font-bold tracking-tight text-neutral-900">SHOPPING BAG</h3>
+          <span class="cart-count-badge bg-neutral-900 text-white text-[10px] px-1.5 py-0.5 rounded-full font-mono tabular-nums">0</span>
+        </div>
+        <button id="btnCloseCart" class="p-1.5 text-neutral-400 hover:text-neutral-900 transition-colors" title="닫기">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Free Shipping Meter -->
+      <div class="bg-neutral-50 px-4 py-2.5 border-b border-neutral-100">
+        <div class="flex justify-between items-center text-[11px] text-neutral-600 mb-1">
+          <span id="freeShippingText">100,000원 추가 구매 시 무료배송</span>
+          <span class="text-neutral-400">10만원 이상</span>
+        </div>
+        <div class="w-full bg-neutral-200 h-1.5 rounded-full overflow-hidden">
+          <div id="freeShippingBar" class="bg-gradient-to-r from-pink-500 to-rose-400 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Drawer Items Container -->
+      <div id="cartItemsList" class="flex-1 overflow-y-auto divide-y divide-neutral-100"></div>
+
+      <!-- Empty State -->
+      <div id="cartEmptyState" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center text-neutral-400">
+        <svg class="w-12 h-12 stroke-[1.2] mb-3 text-neutral-300" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p class="text-xs font-medium text-neutral-700">쇼핑백이 비어있습니다.</p>
+        <p class="text-[11px] mt-1">2026 FW 신상품을 둘러보고 마음에 드는 상품을 담아보세요.</p>
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="p-4 border-t border-neutral-100 bg-white space-y-3">
+        <div class="flex items-center justify-between text-sm">
+          <span class="text-neutral-500 font-medium">Subtotal</span>
+          <span id="cartSubtotalAmount" class="font-bold text-neutral-900 tabular-nums text-base">₩0</span>
+        </div>
+        <p class="text-[10px] text-neutral-400">배송비 및 할인쿠폰은 결제 단계에서 적용됩니다.</p>
+        <button id="btnCheckout" class="w-full py-3.5 bg-neutral-950 text-white font-medium text-xs tracking-wider uppercase rounded-none hover:bg-neutral-800 transition-colors shadow-sm">
+          주문 결제하기 (Checkout)
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. QUICK VIEW MODAL -->
+    <div id="quickViewBackdrop" class="fixed inset-0 bg-black/60 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="quickViewModal" class="fixed inset-4 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-2xl sm:w-full bg-white z-50 rounded-sm shadow-2xl flex flex-col max-h-[90vh] overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-out" role="dialog" aria-modal="true">
+      <div class="relative flex-1 overflow-y-auto">
+        <button id="closeQuickView" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-neutral-200 flex items-center justify-center text-neutral-700 hover:text-neutral-950 transition-colors" title="닫기">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2">
+          <!-- Modal Image -->
+          <div class="bg-neutral-50 p-6 flex items-center justify-center min-h-[300px]">
+            <img id="modalImage" src="" alt="" class="max-h-[380px] w-auto object-contain mix-blend-multiply" />
+          </div>
+
+          <!-- Modal Details -->
+          <div class="p-6 flex flex-col justify-between space-y-4">
+            <div>
+              <span id="modalCategory" class="text-[10px] uppercase tracking-wider text-pink-600 font-mono font-semibold"></span>
+              <h3 id="modalTitle" class="text-lg font-bold text-neutral-900 mt-1 leading-snug"></h3>
+              <p id="modalSubtitle" class="text-xs text-neutral-500"></p>
+
+              <div class="flex items-baseline gap-2 mt-2">
+                <span id="modalPrice" class="text-base font-bold text-neutral-950 tabular-nums"></span>
+                <span id="modalOriginalPrice" class="text-xs text-neutral-400 line-through tabular-nums"></span>
+              </div>
+
+              <p id="modalDesc" class="text-xs text-neutral-600 leading-relaxed mt-3 border-t border-neutral-100 pt-3"></p>
+
+              <!-- Size Selection -->
+              <div class="mt-4">
+                <span class="text-xs font-semibold text-neutral-900 block mb-1.5">Size</span>
+                <div id="modalSizeOptions" class="flex flex-wrap gap-1.5"></div>
+              </div>
+
+              <!-- Color Selection -->
+              <div class="mt-3">
+                <span class="text-xs font-semibold text-neutral-900 block mb-1.5">Color</span>
+                <div id="modalColorOptions" class="flex flex-wrap gap-1.5"></div>
+              </div>
+
+              <!-- Quantity -->
+              <div class="mt-4 flex items-center gap-3">
+                <span class="text-xs font-semibold text-neutral-900">Quantity</span>
+                <div class="flex items-center border border-neutral-200 rounded text-xs">
+                  <button id="modalQtyMinus" type="button" class="px-2.5 py-1 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100">-</button>
+                  <span id="modalQtyVal" class="px-3 py-1 font-medium tabular-nums text-neutral-800">1</span>
+                  <button id="modalQtyPlus" type="button" class="px-2.5 py-1 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add to Bag CTA -->
+            <button id="modalAddToBag" class="w-full py-3 bg-neutral-950 text-white text-xs font-semibold tracking-wider uppercase hover:bg-pink-600 transition-colors shadow-sm">
+              Add to Bag
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. SEARCH MODAL -->
+    <div id="searchBackdrop" class="fixed inset-0 bg-black/60 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="searchModal" class="fixed top-12 left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 sm:w-full sm:max-w-xl bg-white z-50 rounded-sm shadow-2xl p-4 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300">
+      <div class="flex items-center gap-2 border-b border-neutral-200 pb-3">
+        <svg class="w-5 h-5 text-neutral-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input
+          id="siteSearchInput"
+          type="text"
+          placeholder="검색어를 입력하세요 (예: Hoodie, Jeans, Fur, Bomber)"
+          class="flex-1 text-sm outline-none text-neutral-900 placeholder:text-neutral-400 bg-transparent"
+        />
+        <button id="btnCloseSearch" class="p-1 text-neutral-400 hover:text-neutral-900" title="닫기">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="searchResults" class="max-h-72 overflow-y-auto mt-2">
+        <p class="text-xs text-neutral-400 py-4 text-center">검색어를 입력해보세요</p>
+      </div>
+    </div>
+
+    <!-- 4. INSIDE SCULPTOR MEDIA MODAL -->
+    <div id="insideMediaBackdrop" class="fixed inset-0 bg-black/60 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="insideMediaModal" class="fixed inset-4 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-lg sm:w-full bg-white z-50 rounded-sm shadow-2xl p-6 opacity-0 scale-95 pointer-events-none transition-all duration-300">
+      <div class="flex justify-between items-start mb-3">
+        <div>
+          <h4 id="insideMediaTitle" class="font-editorial-serif text-lg font-bold text-neutral-900"></h4>
+          <p id="insideMediaSubtitle" class="text-xs text-pink-600 font-medium"></p>
+        </div>
+        <button id="closeInsideMedia" class="p-1 text-neutral-400 hover:text-neutral-900" title="닫기">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="insideMediaContent"></div>
+    </div>
+
+    <!-- 5. MOBILE NAVIGATION DRAWER -->
+    <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/60 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="mobileMenuDrawer" class="fixed top-0 left-0 bottom-0 w-3/4 max-w-xs bg-white z-50 shadow-2xl p-6 -translate-x-full transition-transform duration-300 flex flex-col justify-between">
+      <div>
+        <div class="flex justify-between items-center pb-6 border-b border-neutral-100">
+          <span class="font-editorial-serif text-2xl font-bold tracking-tight">SCULPTOR</span>
+          <button id="btnCloseMobileMenu" class="p-1 text-neutral-400 hover:text-neutral-900" title="닫기">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-4 mt-6 text-sm font-semibold tracking-wide text-neutral-800 font-editorial-sans">
+          <a href="#new-drop" class="hover:text-pink-600 transition-colors py-1">NEW DROP</a>
+          <a href="#full-release" class="hover:text-pink-600 transition-colors py-1">FULL RELEASE</a>
+          <a href="#style-edit" class="hover:text-pink-600 transition-colors py-1">STYLE EDIT</a>
+          <a href="#best-seller" class="hover:text-pink-600 transition-colors py-1">BEST SELLER</a>
+          <a href="#inside-sculptor" class="hover:text-pink-600 transition-colors py-1">INSIDE SCULPTOR</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-neutral-100 text-xs text-neutral-500 space-y-1">
+        <p>CS: 02-336-8488</p>
+        <p class="text-[11px]">© SCULPTOR 2026</p>
+      </div>
+    </div>
+
+    <!-- 6. TOAST NOTIFICATION -->
+    <div id="notificationToast" class="fixed bottom-6 right-6 z-50 bg-neutral-950 text-white text-xs px-4 py-3 rounded shadow-xl flex items-center gap-2.5 translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+      <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+      <span id="toastMessage">상품이 백에 담겼습니다.</span>
+    </div>
+
+    <!-- Pure Vanilla JS Entry Point -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

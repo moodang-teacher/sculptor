@@ -1,0 +1,6 @@
+{
+  "name": "SCULPTOR 2026 FW",
+  "description": "Official 2026 FW Brand Experience & Lookbook Store for SCULPTOR",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
